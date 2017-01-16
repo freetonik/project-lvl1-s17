@@ -1,13 +1,14 @@
 {
   "name": "project-lvl1-s17-001",
   "version": "0.0.1",
-  "description": "",
+  "description": "Hexlet Projects, session 17",
   "main": "index.js",
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*"
+    "babel-preset-stage-0": "*",
+    "readline-sync": "*"
   },
   "scripts": {
     "prepublish": "npm run build",
