@@ -19,7 +19,7 @@ const isCorrect = answer => {
 }
 
 const isCorrectCombination = (answer, number) => {
-  if (isEven(number) && isCorrect(answer) || !isEven(number) && !isCorrect(answer)) {
+  if (isEven(number) === isCorrect(answer)) {
     return true
   }
   return false;
