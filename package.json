@@ -1,6 +1,6 @@
 {
   "name": "project-lvl1-s17-001",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Hexlet Projects, session 17",
   "main": "index.js",
   "devDependencies": {
@@ -14,7 +14,8 @@
     "babel-eslint": "*"
   },
   "dependencies": {
-    "readline-sync": "*"
+    "readline-sync": "*",
+    "hexlet-pairs": "*"
   },
   "scripts": {
     "prepublish": "npm run build",
