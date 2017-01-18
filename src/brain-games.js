@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import brainEvenGame from './brain-even';
 import brainCalcGame from './brain-calc';
+import brainGcdGame from './brain-gcd';
 import { cons, car, cdr, toString } from 'hexlet-pairs';
 
 const greetUser = () => {
@@ -13,7 +14,7 @@ const greetUser = () => {
 const askUser = (question, answerValidator) => {
   let answer;
   while (true) {
-    answer = readlineSync.question("Question: " + question);
+    answer = readlineSync.question("Question: " + question + "\nYour answer: ");
     if (answerValidator(answer)) return answer;
     else {
       console.log("Your answer is invalid. Try again.");
@@ -42,7 +43,7 @@ const brainGameStep = (game, step, winning = true) => {
 
 const startGame = (steps) => {
   const name = greetUser()
-  const gameResult = brainGameStep(brainCalcGame(), steps);
+  const gameResult = brainGameStep(brainGcdGame(), steps);
   if (gameResult === true) {
     console.log(`Congratulations, ${name}`);
   } else {
