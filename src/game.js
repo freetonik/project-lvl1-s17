@@ -1,23 +1,22 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr, toString } from 'hexlet-pairs';
+import { car, cdr } from 'hexlet-pairs';
 
 const getUserName = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}`);
   return name;
-}
+};
 
 const askUser = (question, answerValidator) => {
   let answer;
-  while (true) {
-    answer = readlineSync.question("Question: " + question + "\nYour answer: ");
+  for (;;) {
+    answer = readlineSync.question(`Question: ${question}
+Your answer: `);
     if (answerValidator(answer)) return answer;
-    else {
-      console.log("Your answer is invalid. Try again.");
-    }
+    console.log('Your answer is invalid. Try again.');
   }
-}
+};
 
 const startGame = (getProblem, isValidAnswer, steps = 3) => {
   const iter = (step, correctAnswers = 0) => {
@@ -29,22 +28,22 @@ const startGame = (getProblem, isValidAnswer, steps = 3) => {
     const answer = askUser(problemText, isValidAnswer);
 
     if (answer === correctAnswer) {
-      console.log("Correct!");
-      return iter(step-1, correctAnswers + 1);
-    } else {
-      console.log(`${answer} is the wrong answer ;(. Correct answer was ${correctAnswer}`);
-      return iter(step-1, correctAnswers);
+      console.log('Correct!');
+      return iter(step - 1, correctAnswers + 1);
     }
-  }
+
+    console.log(`${answer} is the wrong answer ;(. Correct answer was ${correctAnswer}`);
+    return iter(step - 1, correctAnswers);
+  };
 
   const name = getUserName();
-  const gameResult = iter(steps);
+  const gameWon = iter(steps);
 
-  if (gameResult === true) {
+  if (gameWon) {
     console.log(`Congratulations, ${name}`);
   } else {
     console.log(`Better luck next time, ${name}`);
   }
-}
+};
 
 export default startGame;

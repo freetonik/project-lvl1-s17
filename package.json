@@ -1,6 +1,6 @@
 {
   "name": "brain_games_s17",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Hexlet Projects, session 17",
   "main": "index.js",
   "devDependencies": {
