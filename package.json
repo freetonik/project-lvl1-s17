@@ -1,6 +1,6 @@
 {
   "name": "brain_games_s17",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Hexlet Projects, session 17",
   "main": "index.js",
   "devDependencies": {
@@ -27,7 +27,8 @@
   "bin": {
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-gcd": "dist/bin/brain-gcd.js"
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js"
   },
   "repository": {
     "type": "git",
