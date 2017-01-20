@@ -1,16 +1,16 @@
-import { cons, car, cdr, toString } from 'hexlet-pairs';
+import { cons, car, cdr } from 'hexlet-pairs';
 import { randomPositiveInt, isNumber } from '../utils';
 import startGame from '../game';
 
 const getRandomOperator = () => {
-  switch(randomPositiveInt(3)){
+  switch (randomPositiveInt(3)) {
     case 1:
-      return cons((a, b) => { return a + b; }, '+');
+      return cons((a, b) => a + b, '+');
     case 2:
-      return cons((a, b) => { return a - b; }, '-');
+      return cons((a, b) => a - b, '-');
     case 3:
     default:
-      return cons((a, b) => { return a * b; }, '*');
+      return cons((a, b) => a * b, '*');
   }
 };
 

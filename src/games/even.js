@@ -1,4 +1,4 @@
-import { cons, car, cdr, toString } from 'hexlet-pairs';
+import { cons } from 'hexlet-pairs';
 import { randomPositiveInt, isYesNoAnswer, isEven } from '../utils';
 import startGame from '../game';
 

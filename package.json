@@ -1,17 +1,17 @@
 {
   "name": "brain_games_s17",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Hexlet Projects, session 17",
   "main": "index.js",
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
+    "babel-eslint": "^7.1.1",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
-    "eslint": "*",
+    "eslint": "^3.13.1",
     "eslint-config-airbnb-base": "*",
-    "eslint-plugin-import": "*",
-    "babel-eslint": "*"
+    "eslint-plugin-import": "*"
   },
   "dependencies": {
     "readline-sync": "*",

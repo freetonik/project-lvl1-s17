@@ -7,10 +7,6 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const isValidAnswer = (answer) => {
-  return !isNaN(answer);
-};
-
 const getProblem = () => {
   const num1 = randomPositiveInt(20);
   const num2 = randomPositiveInt(20);
